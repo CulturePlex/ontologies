@@ -1,0 +1,4071 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- Taken from http://ontologies.ezweb.morfeo-project.org/res/template.html -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>BaroqueArt Descriptors Ontology: An ontology to formalize the
+way to describe an artwork</title>
+  <link rel="stylesheet" type="text/css" href="../../../media/css/base.css">
+  <link rel="stylesheet" type="text/css"
+ href="../../../media/css/cultureplex.css">
+</head>
+<body>
+<div class="head">
+<a href="http://www.cultureplex.ca/"> <img
+ src="../../../media/img/logo.png" alt="CulturePlex" id="main-logo"></a>
+<h1 id="title">BaroqueArt Descriptors Ontology<br>
+</h1>
+<h2 id="subtitle">An ontology to formalize the way to describe an
+artwork.</h2>
+<h2 id="doctype">Working Draft - 25 February 2011</h2>
+<dl>
+  <dt>This version:</dt>
+  <dd> <a
+ href="http://ontologies.cultureplex.ca/baroqueart/spec/20110225/index.html">http://ontologies.cultureplex.ca/baroqueart/spec/20110225/</a>
+  </dd>
+  <dt>Latest version:</dt>
+  <dd> <a
+ href="http://ontologies.cultureplex.ca/baroqueart/spec/index.html">http://ontologies.cultureplex.ca/baroqueart/spec/</a>
+  </dd>
+  <dt>Last Update:</dt>
+  <dd>Date: 25 February 2011<br>
+  </dd>
+  <dt>Editors:</dt>
+  <dd>Javier de la Rosa &lt;<a href="mailto:jrosa@uwo.ca">jrosa@uwo.ca</a>&gt;
+(CulturePlex)
+
+  </dd>
+  <dt>Contributors:</dt>
+  <dd>Fernando Sancho &lt;<a href="mailto:fsancho@us.es">fsancho@us.es</a>&gt;
+(Universidad
+de
+Sevilla)<br>
+Juan Luis Suárez &lt;<a href="mailto:jsuarez@uwo.ca">jsuarez@uwo.ca</a>&gt;
+(CulturePlex)
+
+  </dd>
+  <dt>Acknowledgements:</dt>
+  <dd>See <a href="#acknowledgments">acknowledgements</a></dd>
+</dl>
+<p class="copyright"> <a
+ href="http://creativecommons.org/licenses/by-sa/3.0/"> <img
+ src="../../../media/img/cc.png"
+ alt="CreativeCommons Attribution-Share Alike 3.0" style="float: right;">
+</a> Copyright © 2011 by <a href="http://www.cultureplex.ca/">CulturePlex</a>.
+This
+work
+(both
+the
+specification and the ontology)
+is
+licensed
+under
+<a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+Commons
+Attribution-Share
+Alike
+3.0</a>, so you are granted to use, copy,
+distribute, transmit and adapt this work, but you must attribute the
+work to the original authors and distribute the resulting work under
+similar terms.
+</p>
+<p class="copyright" style="clear: both;"> This work is supported by <a
+ href="http://www.cultureplex.ca/">CulturePlex</a> and is being
+partially funded by <a href="http://www.uwo.ca">The University of
+Western Ontario</a>, <a href="http://www.innovation.ca/">Canada
+Foundation for Innovation</a> and <a
+ href="http://www.sshrc-crsh.gc.ca/">Social Sciences and Humanities
+Research Council of Canada</a>.
+</p>
+</div>
+<hr>
+<h2 id="abstract">Abstract</h2>
+<p>This specification defines the ontology to describe the Hispanic
+Baroque artworks. The ontology is available in RDF/XML format at:<br>
+</p>
+<div style="text-align: center;"><a style="font-weight: bold;"
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf</a><br>
+<div style="text-align: left;"><br>
+It is designed to be used together with Dublin Core ontology [<a
+ href="#ref-dublin-core">Dublin Core</a>] to enrich the
+<pre>dc:Subject</pre>
+metadata element.<br>
+</div>
+</div>
+<p><br>
+</p>
+<h2 id="status">Status of this Document</h2>
+<p> <strong>This is a work in progress!</strong> This document is
+changing on a monthly if not weekly basis. Comments are very welcome,
+please send them to the authors. Thank you.
+</p>
+<h2 id="contents">Table of Contents</h2>
+<ol start="4" id="toc" style="list-style-type: decimal;">
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#sec-glance">BaroqueArt Descriptors ontology at a glance</a></li>
+  <li><a href="#overview">BaroqueArt Descriptors ontology overview</a>
+    <ol>
+      <li><a href="#s31">Virtuality</a>
+        <ol>
+          <li><a href="#s311">Ideality</a>
+            <ol>
+              <li><a href="#s3111">Intentional human state</a></li>
+              <li><a href="#s3112">Interpretable thing</a><br>
+              </li>
+            </ol>
+          </li>
+          <li><a href="#s312">Physicality</a></li>
+          <ol>
+            <li><a href="#s3121">Perceptible thing</a></li>
+            <ol>
+              <li><a href="#s31211">With human participation</a></li>
+              <li><a href="#s31212">Without human participation</a><br>
+              </li>
+            </ol>
+          </ol>
+        </ol>
+      </li>
+      <li><a href="#s32">Example</a></li>
+    </ol>
+  </li>
+  <li><a href="#reference">Cross-reference for BaroqueArt Descriptors
+classes and properties</a></li>
+  <li><a href="#furtherwork">Further work</a></li>
+</ol>
+<h3>Appendices</h3>
+<ol id="appendix">
+  <li><a href="#references">References</a></li>
+  <li><a href="#changes">Changes
+in
+this
+version</a> (Non-Normative)</li>
+  <li><a href="#acknowledgements">Acknowledgements</a>
+(Non-Normative)</li>
+</ol>
+<hr>
+<div class="body">
+<div class="div1">
+<h2 id="intro">1 Introduction</h2>
+This ontology sets that any artwork is by itself a virtuality, that is,
+there is an option to be confined in some way and rendered, understood
+the latter as a capacity of being expressed. In addition, any artwork
+is
+composed of an ideality and a physicality, taking into account the
+properties of its conception, intention and expression as well as space
+and materials that compose it.<br>
+</div>
+<div class="div2">
+<div class="div3"><br>
+</div>
+<div class="glance">
+<h2 id="sec-glance">2. BaroqueArt Descriptors ontology at a glance</h2>
+<p>An alphabetical index of BaroqueArt Descriptors terms, by class
+(concepts) and by
+property (relationships, attributes), are given below. All the terms
+are hyperlinked to their detailed description for quick reference.</p>
+<!-- The list of classes and properties goes here -->
+<div
+ style="border: medium dotted ; padding: 1em; background-color: rgb(221, 221, 221);">
+<p>Classes: <a href="#term_AbstractEntity">AbstractEntity</a>, <a
+ href="#term_Activity">Activity</a>, <a href="#term_Age">Age</a>, <a
+ href="#term_Altarpiece">Altarpiece</a>, <a href="#term_Animal">Animal</a>,
+<a href="#term_Arch">Arch</a>, <a href="#term_Architecture">Architecture</a>,
+<a href="#term_Attentionality">Attentionality</a>, <a
+ href="#term_Belief">Belief</a>, <a href="#term_BenedetoCroce">BenedetoCroce</a>,
+<a href="#term_Benoist">Benoist</a>, <a href="#term_Biptych">Biptych</a>,
+<a href="#term_BodyPart">BodyPart</a>, <a href="#term_Burckhardt">Burckhardt</a>,
+<a href="#term_Canvas">Canvas</a>, <a href="#term_Celebration">Celebration</a>,
+<a href="#term_ChristineBuci-Glucksmann">ChristineBuci-Glucksmann</a>, <a
+ href="#term_ConcreteEntity">ConcreteEntity</a>, <a
+ href="#term_Confineable">Confineable</a>, <a href="#term_Crucifix">Crucifix</a>,
+<a href="#term_Deity">Deity</a>, <a href="#term_Deleuze">Deleuze</a>, <a
+ href="#term_Description">Description</a>, <a href="#term_Diptych">Diptych</a>,
+<a href="#term_Drawing">Drawing</a>, <a href="#term_Dvorak">Dvorak</a>,
+<a href="#term_EngravingFold">EngravingFold</a>, <a href="#term_Ethnic">Ethnic</a>,
+<a href="#term_EugenioD%27Ors">EugenioD'Ors</a>, <a href="#term_Fiesta">Fiesta</a>,
+<a href="#term_Figurative">Figurative</a>, <a href="#term_Flag">Flag</a>,
+<a href="#term_Focillon">Focillon</a>, <a href="#term_Focus">Focus</a>,
+<a href="#term_Fold">Fold</a>, <a href="#term_FoldingScreen">FoldingScreen</a>,
+<a href="#term_Frame">Frame</a>, <a href="#term_FrescoFold">FrescoFold</a>,
+<a href="#term_Furniture">Furniture</a>, <a href="#term_Gender">Gender</a>,
+<a href="#term_Genre">Genre</a>, <a href="#term_Goldsmithing">Goldsmithing</a>,
+<a href="#term_Guattari">Guattari</a>, <a href="#term_HeavenlyBody">HeavenlyBody</a>,
+<a href="#term_HeinrichWolfflin">HeinrichWolfflin</a>, <a
+ href="#term_HelmutHatzfeld">HelmutHatzfeld</a>, <a href="#term_Hero">Hero</a>,
+<a href="#term_HumanBeing">HumanBeing</a>, <a
+ href="#term_HumanIntentionalState">HumanIntentionalState</a>, <a
+ href="#term_Ideality">Ideality</a>, <a href="#term_InitialConnection">InitialConnection</a>,
+<a href="#term_InterpretableThing">InterpretableThing</a>, <a
+ href="#term_Jewelry">Jewelry</a>, <a href="#term_Lacan">Lacan</a>, <a
+ href="#term_Maravall">Maravall</a>, <a href="#term_Material">Material</a>,
+<a href="#term_Meaning">Meaning</a>, <a href="#term_Medal">Medal</a>, <a
+ href="#term_Medallion">Medallion</a>, <a href="#term_Merleau-Ponty">Merleau-Ponty</a>,
+<a href="#term_Metaphor">Metaphor</a>, <a href="#term_Monad">Monad</a>,
+<a href="#term_Moret">Moret</a>, <a href="#term_MythologicalBeing">MythologicalBeing</a>,
+<a href="#term_Nail">Nail</a>, <a href="#term_NotFigurative">NotFigurative</a>,
+<a href="#term_Object">Object</a>, <a href="#term_Occupation">Occupation</a>,
+<a href="#term_OmarCalabrese">OmarCalabrese</a>, <a
+ href="#term_Painting">Painting</a>, <a href="#term_PerceptibleThing">PerceptibleThing</a>,
+<a href="#term_Photography">Photography</a>, <a
+ href="#term_Physicality">Physicality</a>, <a href="#term_PictureCard">PictureCard</a>,
+<a href="#term_PierreCharpentrat">PierreCharpentrat</a>, <a
+ href="#term_Pigment">Pigment</a>, <a href="#term_Plant">Plant</a>, <a
+ href="#term_Plate">Plate</a>, <a href="#term_Preclin">Preclin</a>, <a
+ href="#term_ReliefFold">ReliefFold</a>, <a href="#term_Renderizable">Renderizable</a>,
+<a href="#term_Representation">Representation</a>, <a
+ href="#term_Resonance">Resonance</a>, <a href="#term_Ritual">Ritual</a>,
+<a href="#term_Rousset">Rousset</a>, <a href="#term_Screen">Screen</a>,
+<a href="#term_SculptureMonad">SculptureMonad</a>, <a
+ href="#term_SeveroSarduy">SeveroSarduy</a>, <a href="#term_Sheet">Sheet</a>,
+<a href="#term_Silversmithing">Silversmithing</a>, <a
+ href="#term_Sketch">Sketch</a>, <a href="#term_Statue">Statue</a>, <a
+ href="#term_Symbology">Symbology</a>, <a href="#term_Tapie">Tapie</a>,
+<a href="#term_Technique">Technique</a>, <a href="#term_Text">Text</a>,
+<a href="#term_Theory">Theory</a>, <a href="#term_Tool">Tool</a>, <a
+ href="#term_Triptych">Triptych</a>, <a href="#term_Virtuality">Virtuality</a>,
+<a href="#term_WalterBenjamin">WalterBenjamin</a>, <a
+ href="#term_WernerWeisbach">WernerWeisbach</a>, <a
+ href="#term_WithHumanParticipation">WithHumanParticipation</a>, <a
+ href="#term_WithoutHumanParticipation">WithoutHumanParticipation</a>, </p>
+<p>Properties: <a href="#term_belongsToEthnic">belongsToEthnic</a>, <a
+ href="#term_consistsOf">consistsOf</a>, <a href="#term_fromBody">fromBody</a>,
+<a href="#term_hasBelief">hasBelief</a>, <a href="#term_hasFold">hasFold</a>,
+<a href="#term_hasMonad">hasMonad</a>, <a href="#term_hasOccupation">hasOccupation</a>,
+<a href="#term_hasTheory">hasTheory</a>, <a
+ href="#term_isClassifiedUnder">isClassifiedUnder</a>, <a
+ href="#term_isExpressed">isExpressed</a>, <a href="#term_isGender">isGender</a>,
+<a href="#term_isMeasurable">isMeasurable</a>, <a
+ href="#term_isNotMeasurable">isNotMeasurable</a>, <a
+ href="#term_isOld">isOld</a>, <a href="#term_usesTechnique">usesTechnique</a>,
+<a href="#term_usesTool">usesTool</a>, </p>
+<p>Instances: <a href="#term_Afro">Afro</a>, <a
+ href="#term_AgglomerateBoard">AgglomerateBoard</a>, <a
+ href="#term_Alabaster">Alabaster</a>, <a href="#term_Allegorical">Allegorical</a>,
+<a href="#term_Aluminium">Aluminium</a>, <a href="#term_Angelic">Angelic</a>,
+<a href="#term_Architectural">Architectural</a>, <a href="#term_Artist">Artist</a>,
+<a href="#term_Baked">Baked</a>, <a href="#term_BasRelief">BasRelief</a>,
+<a href="#term_Black">Black</a>, <a href="#term_BornFemale">BornFemale</a>,
+<a href="#term_BornMale">BornMale</a>, <a href="#term_Brocade">Brocade</a>,
+<a href="#term_Bronze">Bronze</a>, <a href="#term_Brush">Brush</a>, <a
+ href="#term_Cane">Cane</a>, <a href="#term_Cardboard">Cardboard</a>, <a
+ href="#term_Carved">Carved</a>, <a href="#term_Castes">Castes</a>, <a
+ href="#term_CastesEthnic">CastesEthnic</a>, <a href="#term_Casting">Casting</a>,
+<a href="#term_Ceramics">Ceramics</a>, <a href="#term_Charcoal">Charcoal</a>,
+<a href="#term_China">China</a>, <a href="#term_Chipboard">Chipboard</a>,
+<a href="#term_Chisel">Chisel</a>, <a href="#term_Chiseling">Chiseling</a>,
+<a href="#term_CityLife">CityLife</a>, <a href="#term_Civil">Civil</a>,
+<a href="#term_Cleric">Cleric</a>, <a href="#term_Copper">Copper</a>, <a
+ href="#term_Corn">Corn</a>, <a href="#term_Cotton">Cotton</a>, <a
+ href="#term_Crayon">Crayon</a>, <a href="#term_Crockery">Crockery</a>,
+<a href="#term_Crystal">Crystal</a>, <a href="#term_Cut">Cut</a>, <a
+ href="#term_Cutting">Cutting</a>, <a href="#term_Draw">Draw</a>, <a
+ href="#term_Earthenware">Earthenware</a>, <a href="#term_Embossed">Embossed</a>,
+<a href="#term_Embroidery">Embroidery</a>, <a href="#term_Enamel">Enamel</a>,
+<a href="#term_Engraving">Engraving</a>, <a href="#term_Etching">Etching</a>,
+<a href="#term_Farmer">Farmer</a>, <a href="#term_Feather">Feather</a>,
+<a href="#term_Fiber">Fiber</a>, <a href="#term_Fiberboard">Fiberboard</a>,
+<a href="#term_Fiction">Fiction</a>, <a href="#term_Foot">Foot</a>, <a
+ href="#term_Fresco">Fresco</a>, <a href="#term_GenderIndeterminate">GenderIndeterminate</a>,
+<a href="#term_GenderNotRevealed">GenderNotRevealed</a>, <a
+ href="#term_GenderUnknown">GenderUnknown</a>, <a href="#term_Gipsy">Gipsy</a>,
+<a href="#term_Glass">Glass</a>, <a href="#term_Glaze">Glaze</a>, <a
+ href="#term_Glued">Glued</a>, <a href="#term_Gold">Gold</a>, <a
+ href="#term_GoldColored">GoldColored</a>, <a href="#term_Gouache">Gouache</a>,
+<a href="#term_Gouge">Gouge</a>, <a href="#term_Graver">Graver</a>, <a
+ href="#term_Grisalle">Grisalle</a>, <a href="#term_Gum">Gum</a>, <a
+ href="#term_Hammer">Hammer</a>, <a href="#term_Hand">Hand</a>, <a
+ href="#term_Head">Head</a>, <a href="#term_Heart">Heart</a>, <a
+ href="#term_Hemp">Hemp</a>, <a href="#term_Historical">Historical</a>,
+<a href="#term_Illuminate">Illuminate</a>, <a href="#term_Indigenous">Indigenous</a>,
+<a href="#term_Ink">Ink</a>, <a href="#term_Inlaid">Inlaid</a>, <a
+ href="#term_Ivory">Ivory</a>, <a href="#term_Jester">Jester</a>, <a
+ href="#term_Landscape">Landscape</a>, <a href="#term_Leather">Leather</a>,
+<a href="#term_Limbs">Limbs</a>, <a href="#term_Linen">Linen</a>, <a
+ href="#term_Maguey">Maguey</a>, <a href="#term_Maize">Maize</a>, <a
+ href="#term_Map">Map</a>, <a href="#term_Marble">Marble</a>, <a
+ href="#term_Mestizo">Mestizo</a>, <a href="#term_Metal">Metal</a>, <a
+ href="#term_Military">Military</a>, <a href="#term_Molding">Molding</a>,
+<a href="#term_Molten">Molten</a>, <a href="#term_Monarch">Monarch</a>,
+<a href="#term_MotherOfPearl">MotherOfPearl</a>, <a href="#term_Mould">Mould</a>,
+<a href="#term_Mulatto">Mulatto</a>, <a href="#term_Mural">Mural</a>, <a
+ href="#term_Mythological">Mythological</a>, <a href="#term_Nacre">Nacre</a>,
+<a href="#term_Nature">Nature</a>, <a href="#term_Nobel">Nobel</a>, <a
+ href="#term_Notch">Notch</a>, <a href="#term_NotReligious">NotReligious</a>,
+<a href="#term_Nude">Nude</a>, <a href="#term_Officer">Officer</a>, <a
+ href="#term_Paintbrush">Paintbrush</a>, <a href="#term_Papel">Papel</a>,
+<a href="#term_Paper">Paper</a>, <a href="#term_Parchment">Parchment</a>,
+<a href="#term_Pencil">Pencil</a>, <a href="#term_Plan">Plan</a>, <a
+ href="#term_Plank">Plank</a>, <a href="#term_Plaster">Plaster</a>, <a
+ href="#term_Polychrome">Polychrome</a>, <a href="#term_Porphyry">Porphyry</a>,
+<a href="#term_Portrait">Portrait</a>, <a href="#term_Pottery">Pottery</a>,
+<a href="#term_Printed">Printed</a>, <a href="#term_Quilt">Quilt</a>, <a
+ href="#term_Reed">Reed</a>, <a href="#term_Relief">Relief</a>, <a
+ href="#term_Religion">Religion</a>, <a href="#term_Religious">Religious</a>,
+<a href="#term_RitualGenre">RitualGenre</a>, <a href="#term_Saints">Saints</a>,
+<a href="#term_Sanguine">Sanguine</a>, <a href="#term_Satin">Satin</a>,
+<a href="#term_Sculpture">Sculpture</a>, <a href="#term_Shell">Shell</a>,
+<a href="#term_Shepherd">Shepherd</a>, <a href="#term_Silk">Silk</a>, <a
+ href="#term_Silver">Silver</a>, <a href="#term_Skin">Skin</a>, <a
+ href="#term_Sponge">Sponge</a>, <a href="#term_SpongeCake">SpongeCake</a>,
+<a href="#term_Steel">Steel</a>, <a href="#term_StillLife">StillLife</a>,
+<a href="#term_Stone">Stone</a>, <a href="#term_Tempera">Tempera</a>, <a
+ href="#term_Tinplate">Tinplate</a>, <a href="#term_Tooled">Tooled</a>,
+<a href="#term_Torso">Torso</a>, <a href="#term_Tortoiseshell">Tortoiseshell</a>,
+<a href="#term_Trinity">Trinity</a>, <a href="#term_Vanitas">Vanitas</a>,
+<a href="#term_Vellum">Vellum</a>, <a href="#term_Watercolor">Watercolor</a>,
+<a href="#term_WateredDown">WateredDown</a>, <a href="#term_White">White</a>,
+<a href="#term_WhiteLead">WhiteLead</a>, <a
+ href="#term_WhiteWateredDown">WhiteWateredDown</a>, <a
+ href="#term_Wineskin">Wineskin</a>, <a href="#term_Wood">Wood</a>, <a
+ href="#term_Zinc">Zinc</a>, </p>
+</div>
+<!-- End of the terms list -->
+</div>
+<h2 id="overview">3. BaroqueArt Descriptors ontology overview</h2>
+Here there is a brief resume of the main elements of the ontology.<br>
+<div class="div2">
+<h2 id="s31">3.1. Virtuality</h2>
+Main entity that includes both a conception of the work as a tinge of
+ideality and the physical component of it.<br>
+</div>
+<div class="div3">
+<h3 id="s311">3.1.1. Ideality</h3>
+Abstract artifact that exist only mind internally.<br>
+</div>
+<div class="div3">
+<h4 id="s3111">3.1.1.1. Human Intentional State</h4>
+Abstract artifacts that exist only in the mind, which are internal or
+are subject to it in its existence. They have no restraint.<br>
+<br>
+The human intentional state can be expressed by an activity through the
+several available techniques and tools.<br>
+<br>
+This state entails, in addition, an attentionality as defined by
+Tomasello (202): “This adaptation consists in the ability and tendency
+of individuals to identify with conspecifics in ways that enable them
+to understand those conspecifics as intentional agents like the self,
+possessing their own intentions and attention, and eventually to
+understand them as mental agents like the self, possessing their own
+desires and beliefs”.&nbsp; <br>
+<h4 id="s3112">3.1.1.2. Interpretable Thing</h4>
+Entities subject to human interpretation. The interpretation is made
+supported on a theory from a domain expert, which is based on a set of
+beliefs. According to the applied theory, a meaning for the artwork is
+given. The entity on which the
+ideality is presented to the consciousness is the representation,
+compund of:<br>
+<ul>
+  <li>Description. Description of reality, fiction and possible,
+through the figurative component of the work based on concrete and
+abstract entities it contains. <br>
+  </li>
+  <li>Metaphor. Relationship between the meaning of an object
+indistinguishable from the rest in the work with another entity, idea,
+concept, person or place.<br>
+  </li>
+  <li>Symbology. Analogies for the description referring to other
+aspects of reality and fiction that are used regularly, metaphorically
+or not.<br>
+  </li>
+</ul>
+<h3 id="s312">3.1.2. Physicality</h3>
+Entities wich exist mind-independent.<br>
+<h4 id="s3121">3.1.2.1. Perceptible thing</h4>
+Perceptible through the human senses.<br>
+<h5 id="s31211">3.1.2.1.1. With human participation</h5>
+Entities which implies human participation like celebrations, rituals
+or fiestas. This kind of entities doesn't exist in any way with
+audience or participants.<br>
+<h5 id="s31212">3.1.2.1.2. Without human participation</h5>
+Entities which exist even when there's no human participation and don't
+need it to exist. Based on the concept of Monad from Leibniz, a Monad
+folds with its own and is indistinguishable from the rest of them. The
+Monad, made of some material, is the smallest part of an artwork. The
+folds like altarpiece or crucifix are compund by one or more monads or
+other folds.<br>
+<br>
+</div>
+<h3 id="s32">3.2. Example</h3>
+<p>Here is a very basic document describing the artwork identified by
+the URL http://artworks.foo/bar by an author with GUID 123456789:<br>
+<br>
+<span class="Apple-style-span"
+ style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;">
+<pre>   &lt;rdf:Description rdf:href="http://artworks.foo/bar"&gt;<br>      &lt;dc:Creator rdf:href="urn:guid:123456789"/&gt;<br>      &lt;dc:Title&gt;The title of the artwork&lt;/dc:Title&gt;<br>      &lt;dc:Subject&gt;<br>         &lt;baroqueart:Ideality&gt;<br>            &lt;baroqueart:Activity&gt;<br>               &lt;baroqueart:Technique&gt;Fresco&lt;/baroqueart:Technique&gt;<br>               &lt;baroqueart:Tool&gt;Brush&lt;/baroqueart:Tool&gt;<br>            &lt;/baroqueart:Activity&gt;<br>            &lt;baroqueart:InterpretableThing baroqueart:Theory="Maravall"&gt;<br>               &lt;baroqueart:Representation&gt;<br>                  &lt;baroqueart:Description&gt;<br>                     &lt;baroqueart:AbstractEntity baroqueart:Genre="Trinity"/&gt;<br>                     &lt;baroqueart:ConcreteEntity baroqueart:Animal="Pidgeon"/&gt;<br>                     &lt;baroqueart:ConcreteEntity baroqueart:HumanBeing&gt;<br>                        &lt;baroqueart:Age&gt;Middle age&lt;/baroqueart:Age&gt;<br>                        &lt;baroqueart:Occupation&gt;Cleric&lt;baroqueart:Occupation&gt;<br>                     &lt;/baroqueart:ConcreteEntity&gt;<br>                  &lt;/baroqueart:Descriptrion&gt;<br>               &lt;baroqueart:Representation&gt;<br>            &lt;/baroqueart:InterpretableThing&gt;<br>         &lt;/baroqueart:Ideality&gt;<br>         &lt;baroqueart:Physicality&gt;<br>            &lt;baroqueart:WithoutHumanParticipation baroqueart:Fold="Painting"&gt;<br>               &lt;baroqueart:Monad baroqueart:Material="Line"&gt;Canvas&lt;/baroqueart:Monad&gt;<br>               &lt;baroqueart:Monad baroqueart:Material="Wood"&gt;Frame&lt;/baroqueart:Monad&gt;<br><span
+ class="Apple-style-span"
+ style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"></span>            &lt;/baroqueart:WithoutHumanParticipation&gt;<br>         &lt;/baroqueart:Physicality&gt;<br>      &lt;/dc:Subject&gt;<br>   &lt;/rdf:Description&gt;</pre>
+</span><br>
+</p>
+<h2 id="reference">4. Cross-reference for BaroqueArt Descriptors
+classes and properties</h2>
+<!-- The following is the script-generated list of classes and properties -->
+<div class="specterm" id="term_AbstractEntity">
+<h3>Class: baroqueart:AbstractEntity</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#AbstractEntity">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#AbstractEntity</a></p>
+<p><em>Abstract entity</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Description" style="font-family: monospace;">baroqueart:Description</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Activity">
+<h3>Class: baroqueart:Activity</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Activity">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Activity</a></p>
+<p><em>Actividad</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_HumanIntentionalState"
+ style="font-family: monospace;">baroqueart:HumanIntentionalState</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Age">
+<h3>Class: baroqueart:Age</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Age">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Age</a></p>
+<p><em>Age</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_HumanBeing" style="font-family: monospace;">baroqueart:HumanBeing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Altarpiece">
+<h3>Class: baroqueart:Altarpiece</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Altarpiece">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Altarpiece</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Animal">
+<h3>Class: baroqueart:Animal</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Animal">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Animal</a></p>
+<p><em>Animal</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Arch">
+<h3>Class: baroqueart:Arch</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Arch">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Arch</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Architecture">
+<h3>Class: baroqueart:Architecture</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Architecture">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Architecture</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Attentionality">
+<h3>Class: baroqueart:Attentionality</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Attentionality">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Attentionality</a></p>
+<p><em>Atencionalidad</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_HumanIntentionalState"
+ style="font-family: monospace;">baroqueart:HumanIntentionalState</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Belief">
+<h3>Class: baroqueart:Belief</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Belief">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Belief</a></p>
+<p><em>Belief</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_InterpretableThing" style="font-family: monospace;">baroqueart:InterpretableThing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_BenedetoCroce">
+<h3>Class: baroqueart:BenedetoCroce</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BenedetoCroce">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BenedetoCroce</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Benoist">
+<h3>Class: baroqueart:Benoist</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Benoist">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Benoist</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Biptych">
+<h3>Class: baroqueart:Biptych</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Biptych">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Biptych</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_BodyPart">
+<h3>Class: baroqueart:BodyPart</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BodyPart">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BodyPart</a></p>
+<p><em>Body part</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Burckhardt">
+<h3>Class: baroqueart:Burckhardt</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Burckhardt">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Burckhardt</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Canvas">
+<h3>Class: baroqueart:Canvas</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Canvas">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Canvas</a></p>
+<p><em>Canvas</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Monad" style="font-family: monospace;">baroqueart:Monad</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Celebration">
+<h3>Class: baroqueart:Celebration</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Celebration">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Celebration</a></p>
+<p><em>Celebración</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_WithHumanParticipation"
+ style="font-family: monospace;">baroqueart:WithHumanParticipation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_ChristineBuci-Glucksmann">
+<h3>Class: baroqueart:ChristineBuci-Glucksmann</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#ChristineBuci-Glucksmann">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#ChristineBuci-Glucksmann</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_ConcreteEntity">
+<h3>Class: baroqueart:ConcreteEntity</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#ConcreteEntity">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#ConcreteEntity</a></p>
+<p><em>Concrete entity</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Description" style="font-family: monospace;">baroqueart:Description</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Confineable">
+<h3>Class: baroqueart:Confineable</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Confineable">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Confineable</a></p>
+<p><em>Confineable thing</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Virtuality" style="font-family: monospace;">baroqueart:Virtuality</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Crucifix">
+<h3>Class: baroqueart:Crucifix</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crucifix">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crucifix</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Deity">
+<h3>Class: baroqueart:Deity</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Deity">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Deity</a></p>
+<p><em>Deidad</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Deleuze">
+<h3>Class: baroqueart:Deleuze</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Deleuze">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Deleuze</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Description">
+<h3>Class: baroqueart:Description</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Description">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Description</a></p>
+<p><em>Descripción</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Representation" style="font-family: monospace;">baroqueart:Representation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Diptych">
+<h3>Class: baroqueart:Diptych</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Diptych">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Diptych</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Drawing">
+<h3>Class: baroqueart:Drawing</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Drawing">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Drawing</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Dvorak">
+<h3>Class: baroqueart:Dvorak</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Dvorak">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Dvorak</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_EngravingFold">
+<h3>Class: baroqueart:EngravingFold</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#EngravingFold">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#EngravingFold</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Ethnic">
+<h3>Class: baroqueart:Ethnic</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ethnic">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ethnic</a></p>
+<p><em>Ethnic</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_HumanBeing" style="font-family: monospace;">baroqueart:HumanBeing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_EugenioD'Ors">
+<h3>Class: baroqueart:EugenioD'Ors</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#EugenioD%27Ors">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#EugenioD'Ors</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Fiesta">
+<h3>Class: baroqueart:Fiesta</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiesta">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiesta</a></p>
+<p><em>Fiesta</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_WithHumanParticipation"
+ style="font-family: monospace;">baroqueart:WithHumanParticipation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Figurative">
+<h3>Class: baroqueart:Figurative</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Figurative">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Figurative</a></p>
+<p><em>Figurative</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Meaning" style="font-family: monospace;">baroqueart:Meaning</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Flag">
+<h3>Class: baroqueart:Flag</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Flag">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Flag</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Focillon">
+<h3>Class: baroqueart:Focillon</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Focillon">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Focillon</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Focus">
+<h3>Class: baroqueart:Focus</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Focus">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Focus</a></p>
+<p><em>Foco</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_AbstractEntity" style="font-family: monospace;">baroqueart:AbstractEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Fold">
+<h3>Class: baroqueart:Fold</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fold">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fold</a></p>
+<p><em>Fold</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_WithoutHumanParticipation"
+ style="font-family: monospace;">baroqueart:WithoutHumanParticipation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_FoldingScreen">
+<h3>Class: baroqueart:FoldingScreen</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#FoldingScreen">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#FoldingScreen</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Frame">
+<h3>Class: baroqueart:Frame</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Frame">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Frame</a></p>
+<p><em>Frame</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Monad" style="font-family: monospace;">baroqueart:Monad</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_FrescoFold">
+<h3>Class: baroqueart:FrescoFold</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#FrescoFold">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#FrescoFold</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Furniture">
+<h3>Class: baroqueart:Furniture</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Furniture">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Furniture</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Gender">
+<h3>Class: baroqueart:Gender</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gender">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gender</a></p>
+<p><em>Gender</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_HumanBeing" style="font-family: monospace;">baroqueart:HumanBeing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Genre">
+<h3>Class: baroqueart:Genre</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Genre">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Genre</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_AbstractEntity" style="font-family: monospace;">baroqueart:AbstractEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Goldsmithing">
+<h3>Class: baroqueart:Goldsmithing</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Goldsmithing">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Goldsmithing</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Guattari">
+<h3>Class: baroqueart:Guattari</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Guattari">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Guattari</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_HeavenlyBody">
+<h3>Class: baroqueart:HeavenlyBody</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HeavenlyBody">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HeavenlyBody</a></p>
+<p><em>Cuerpo celeste</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_HeinrichWolfflin">
+<h3>Class: baroqueart:HeinrichWolfflin</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HeinrichWolfflin">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HeinrichWolfflin</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_HelmutHatzfeld">
+<h3>Class: baroqueart:HelmutHatzfeld</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HelmutHatzfeld">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HelmutHatzfeld</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Hero">
+<h3>Class: baroqueart:Hero</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hero">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hero</a></p>
+<p><em>Hero</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_HumanBeing">
+<h3>Class: baroqueart:HumanBeing</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HumanBeing">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HumanBeing</a></p>
+<p><em>Human being</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_HumanIntentionalState">
+<h3>Class: baroqueart:HumanIntentionalState</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HumanIntentionalState">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HumanIntentionalState</a></p>
+<p><em>Estado intencional humano</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Ideality" style="font-family: monospace;">baroqueart:Ideality</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Ideality">
+<h3>Class: baroqueart:Ideality</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ideality">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ideality</a></p>
+<p><em>Idealidad</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Virtuality" style="font-family: monospace;">baroqueart:Virtuality</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_InitialConnection">
+<h3>Class: baroqueart:InitialConnection</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#InitialConnection">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#InitialConnection</a></p>
+<p><em>Conexión inicial</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Attentionality" style="font-family: monospace;">baroqueart:Attentionality</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_InterpretableThing">
+<h3>Class: baroqueart:InterpretableThing</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#InterpretableThing">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#InterpretableThing</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Ideality" style="font-family: monospace;">baroqueart:Ideality</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Jewelry">
+<h3>Class: baroqueart:Jewelry</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Jewelry">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Jewelry</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Lacan">
+<h3>Class: baroqueart:Lacan</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Lacan">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Lacan</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Maravall">
+<h3>Class: baroqueart:Maravall</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Maravall">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Maravall</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Material">
+<h3>Class: baroqueart:Material</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Material">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Material</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_WithoutHumanParticipation"
+ style="font-family: monospace;">baroqueart:WithoutHumanParticipation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Meaning">
+<h3>Class: baroqueart:Meaning</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Meaning">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Meaning</a></p>
+<p><em>Meaning</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_InterpretableThing" style="font-family: monospace;">baroqueart:InterpretableThing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Medal">
+<h3>Class: baroqueart:Medal</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Medal">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Medal</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Medallion">
+<h3>Class: baroqueart:Medallion</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Medallion">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Medallion</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Merleau-Ponty">
+<h3>Class: baroqueart:Merleau-Ponty</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Merleau-Ponty">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Merleau-Ponty</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Metaphor">
+<h3>Class: baroqueart:Metaphor</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Metaphor">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Metaphor</a></p>
+<p><em>Metaphor</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Representation" style="font-family: monospace;">baroqueart:Representation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Monad">
+<h3>Class: baroqueart:Monad</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Monad">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Monad</a></p>
+<p><em>Monad</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_WithoutHumanParticipation"
+ style="font-family: monospace;">baroqueart:WithoutHumanParticipation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Moret">
+<h3>Class: baroqueart:Moret</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Moret">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Moret</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_MythologicalBeing">
+<h3>Class: baroqueart:MythologicalBeing</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#MythologicalBeing">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#MythologicalBeing</a></p>
+<p><em>Mythological being</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Nail">
+<h3>Class: baroqueart:Nail</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nail">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nail</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_NotFigurative">
+<h3>Class: baroqueart:NotFigurative</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#NotFigurative">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#NotFigurative</a></p>
+<p><em>No figurativo</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Meaning" style="font-family: monospace;">baroqueart:Meaning</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Object">
+<h3>Class: baroqueart:Object</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Object">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Object</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Occupation">
+<h3>Class: baroqueart:Occupation</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Occupation">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Occupation</a></p>
+<p><em>Occupation</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_HumanBeing" style="font-family: monospace;">baroqueart:HumanBeing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_OmarCalabrese">
+<h3>Class: baroqueart:OmarCalabrese</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#OmarCalabrese">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#OmarCalabrese</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Painting">
+<h3>Class: baroqueart:Painting</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Painting">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Painting</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_PerceptibleThing">
+<h3>Class: baroqueart:PerceptibleThing</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#PerceptibleThing">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#PerceptibleThing</a></p>
+<p><em>Cosa perceptible</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Physicality" style="font-family: monospace;">baroqueart:Physicality</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Photography">
+<h3>Class: baroqueart:Photography</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Photography">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Photography</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Physicality">
+<h3>Class: baroqueart:Physicality</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Physicality">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Physicality</a></p>
+<p><em>Fisicalidad</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Virtuality" style="font-family: monospace;">baroqueart:Virtuality</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_PictureCard">
+<h3>Class: baroqueart:PictureCard</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#PictureCard">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#PictureCard</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_PierreCharpentrat">
+<h3>Class: baroqueart:PierreCharpentrat</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#PierreCharpentrat">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#PierreCharpentrat</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Pigment">
+<h3>Class: baroqueart:Pigment</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Pigment">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Pigment</a></p>
+<p><em>Pigment</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Monad" style="font-family: monospace;">baroqueart:Monad</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Plant">
+<h3>Class: baroqueart:Plant</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plant">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plant</a></p>
+<p><em>Plant</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Plate">
+<h3>Class: baroqueart:Plate</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plate">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plate</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Preclin">
+<h3>Class: baroqueart:Preclin</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Preclin">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Preclin</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_ReliefFold">
+<h3>Class: baroqueart:ReliefFold</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#ReliefFold">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#ReliefFold</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Renderizable">
+<h3>Class: baroqueart:Renderizable</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Renderizable">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Renderizable</a></p>
+<p><em>Renderizable</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Virtuality" style="font-family: monospace;">baroqueart:Virtuality</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Representation">
+<h3>Class: baroqueart:Representation</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Representation">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Representation</a></p>
+<p><em>Representación</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_InterpretableThing" style="font-family: monospace;">baroqueart:InterpretableThing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Resonance">
+<h3>Class: baroqueart:Resonance</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Resonance">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Resonance</a></p>
+<p><em>Resonance</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Attentionality" style="font-family: monospace;">baroqueart:Attentionality</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Ritual">
+<h3>Class: baroqueart:Ritual</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ritual">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ritual</a></p>
+<p><em>Ritual</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_WithHumanParticipation"
+ style="font-family: monospace;">baroqueart:WithHumanParticipation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Rousset">
+<h3>Class: baroqueart:Rousset</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Rousset">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Rousset</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Screen">
+<h3>Class: baroqueart:Screen</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Screen">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Screen</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_SculptureMonad">
+<h3>Class: baroqueart:SculptureMonad</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#SculptureMonad">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#SculptureMonad</a></p>
+<p><em>Escultura</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Monad" style="font-family: monospace;">baroqueart:Monad</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_SeveroSarduy">
+<h3>Class: baroqueart:SeveroSarduy</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#SeveroSarduy">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#SeveroSarduy</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Sheet">
+<h3>Class: baroqueart:Sheet</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sheet">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sheet</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Silversmithing">
+<h3>Class: baroqueart:Silversmithing</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Silversmithing">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Silversmithing</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Sketch">
+<h3>Class: baroqueart:Sketch</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sketch">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sketch</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Statue">
+<h3>Class: baroqueart:Statue</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Statue">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Statue</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Symbology">
+<h3>Class: baroqueart:Symbology</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Symbology">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Symbology</a></p>
+<p><em>Simbología</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Representation" style="font-family: monospace;">baroqueart:Representation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Tapie">
+<h3>Class: baroqueart:Tapie</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tapie">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tapie</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Technique">
+<h3>Class: baroqueart:Technique</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Technique">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Technique</a></p>
+<p><em>Technique</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Activity" style="font-family: monospace;">baroqueart:Activity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Text">
+<h3>Class: baroqueart:Text</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Text">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Text</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_ConcreteEntity" style="font-family: monospace;">baroqueart:ConcreteEntity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Theory">
+<h3>Class: baroqueart:Theory</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Theory">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Theory</a></p>
+<p><em>Teoría</em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_InterpretableThing" style="font-family: monospace;">baroqueart:InterpretableThing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Tool">
+<h3>Class: baroqueart:Tool</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tool">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tool</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Activity" style="font-family: monospace;">baroqueart:Activity</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Triptych">
+<h3>Class: baroqueart:Triptych</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Triptych">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Triptych</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Fold" style="font-family: monospace;">baroqueart:Fold</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Virtuality">
+<h3>Class: baroqueart:Virtuality</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Virtuality">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Virtuality</a></p>
+<p><em>Virtualidad</em> - </p>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_WalterBenjamin">
+<h3>Class: baroqueart:WalterBenjamin</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WalterBenjamin">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WalterBenjamin</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_WernerWeisbach">
+<h3>Class: baroqueart:WernerWeisbach</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WernerWeisbach">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WernerWeisbach</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_Theory" style="font-family: monospace;">baroqueart:Theory</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_WithHumanParticipation">
+<h3>Class: baroqueart:WithHumanParticipation</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WithHumanParticipation">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WithHumanParticipation</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_PerceptibleThing" style="font-family: monospace;">baroqueart:PerceptibleThing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_WithoutHumanParticipation">
+<h3>Class: baroqueart:WithoutHumanParticipation</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WithoutHumanParticipation">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WithoutHumanParticipation</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>sub-class-of:</dt>
+  <dd><a href="#term_PerceptibleThing" style="font-family: monospace;">baroqueart:PerceptibleThing</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_belongsToEthnic">
+<h3>Property: baroqueart:belongsToEthnic</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#belongsToEthnic">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#belongsToEthnic</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_consistsOf">
+<h3>Property: baroqueart:consistsOf</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#consistsOf">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#consistsOf</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_fromBody">
+<h3>Property: baroqueart:fromBody</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#fromBody">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#fromBody</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_hasBelief">
+<h3>Property: baroqueart:hasBelief</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasBelief">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasBelief</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_hasFold">
+<h3>Property: baroqueart:hasFold</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasFold">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasFold</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_hasMonad">
+<h3>Property: baroqueart:hasMonad</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasMonad">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasMonad</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_hasOccupation">
+<h3>Property: baroqueart:hasOccupation</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasOccupation">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasOccupation</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_hasTheory">
+<h3>Property: baroqueart:hasTheory</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasTheory">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasTheory</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+  <dt>sub-property-of:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+ style="font-family: monospace;">owl:topObjectProperty</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_isClassifiedUnder">
+<h3>Property: baroqueart:isClassifiedUnder</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isClassifiedUnder">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isClassifiedUnder</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_isExpressed">
+<h3>Property: baroqueart:isExpressed</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isExpressed">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isExpressed</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_isGender">
+<h3>Property: baroqueart:isGender</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isGender">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isGender</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_isMeasurable">
+<h3>Property: baroqueart:isMeasurable</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isMeasurable">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isMeasurable</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_isNotMeasurable">
+<h3>Property: baroqueart:isNotMeasurable</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isNotMeasurable">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isNotMeasurable</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_isOld">
+<h3>Property: baroqueart:isOld</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isOld">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isOld</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_usesTechnique">
+<h3>Property: baroqueart:usesTechnique</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#usesTechnique">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#usesTechnique</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+  <dt>sub-property-of:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+ style="font-family: monospace;">owl:topObjectProperty</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_usesTool">
+<h3>Property: baroqueart:usesTool</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#usesTool">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#usesTool</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>OWL Type:</dt>
+  <dd>ObjectProperty</dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Afro">
+<h3>Instance: baroqueart:Afro</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Afro">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Afro</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Ethnic" style="font-family: monospace;">baroqueart:Ethnic</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_AgglomerateBoard">
+<h3>Instance: baroqueart:AgglomerateBoard</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#AgglomerateBoard">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#AgglomerateBoard</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Alabaster">
+<h3>Instance: baroqueart:Alabaster</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Alabaster">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Alabaster</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Allegorical">
+<h3>Instance: baroqueart:Allegorical</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Allegorical">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Allegorical</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Aluminium">
+<h3>Instance: baroqueart:Aluminium</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Aluminium">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Aluminium</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Angelic">
+<h3>Instance: baroqueart:Angelic</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Angelic">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Angelic</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Architectural">
+<h3>Instance: baroqueart:Architectural</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Architectural">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Architectural</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Artist">
+<h3>Instance: baroqueart:Artist</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Artist">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Artist</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Occupation" style="font-family: monospace;">baroqueart:Occupation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Baked">
+<h3>Instance: baroqueart:Baked</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Baked">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Baked</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_BasRelief">
+<h3>Instance: baroqueart:BasRelief</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BasRelief">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BasRelief</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Black">
+<h3>Instance: baroqueart:Black</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Black">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Black</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Ethnic" style="font-family: monospace;">baroqueart:Ethnic</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_BornFemale">
+<h3>Instance: baroqueart:BornFemale</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BornFemale">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BornFemale</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Gender" style="font-family: monospace;">baroqueart:Gender</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_BornMale">
+<h3>Instance: baroqueart:BornMale</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BornMale">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BornMale</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Gender" style="font-family: monospace;">baroqueart:Gender</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Brocade">
+<h3>Instance: baroqueart:Brocade</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Brocade">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Brocade</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Bronze">
+<h3>Instance: baroqueart:Bronze</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Bronze">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Bronze</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Brush">
+<h3>Instance: baroqueart:Brush</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Brush">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Brush</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Tool" style="font-family: monospace;">baroqueart:Tool</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Cane">
+<h3>Instance: baroqueart:Cane</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cane">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cane</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Cardboard">
+<h3>Instance: baroqueart:Cardboard</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cardboard">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cardboard</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Carved">
+<h3>Instance: baroqueart:Carved</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Carved">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Carved</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Castes">
+<h3>Instance: baroqueart:Castes</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Castes">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Castes</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_CastesEthnic">
+<h3>Instance: baroqueart:CastesEthnic</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#CastesEthnic">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#CastesEthnic</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Ethnic" style="font-family: monospace;">baroqueart:Ethnic</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Casting">
+<h3>Instance: baroqueart:Casting</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Casting">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Casting</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Ceramics">
+<h3>Instance: baroqueart:Ceramics</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ceramics">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ceramics</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Charcoal">
+<h3>Instance: baroqueart:Charcoal</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Charcoal">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Charcoal</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_China">
+<h3>Instance: baroqueart:China</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#China">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#China</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Chipboard">
+<h3>Instance: baroqueart:Chipboard</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Chipboard">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Chipboard</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Chisel">
+<h3>Instance: baroqueart:Chisel</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Chisel">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Chisel</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Tool" style="font-family: monospace;">baroqueart:Tool</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Chiseling">
+<h3>Instance: baroqueart:Chiseling</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Chiseling">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Chiseling</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_CityLife">
+<h3>Instance: baroqueart:CityLife</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#CityLife">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#CityLife</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Civil">
+<h3>Instance: baroqueart:Civil</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Civil">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Civil</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Cleric">
+<h3>Instance: baroqueart:Cleric</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cleric">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cleric</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Occupation" style="font-family: monospace;">baroqueart:Occupation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Copper">
+<h3>Instance: baroqueart:Copper</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Copper">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Copper</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Corn">
+<h3>Instance: baroqueart:Corn</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Corn">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Corn</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Cotton">
+<h3>Instance: baroqueart:Cotton</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cotton">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cotton</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Crayon">
+<h3>Instance: baroqueart:Crayon</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crayon">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crayon</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Crockery">
+<h3>Instance: baroqueart:Crockery</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crockery">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crockery</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Crystal">
+<h3>Instance: baroqueart:Crystal</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crystal">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crystal</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Cut">
+<h3>Instance: baroqueart:Cut</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cut">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cut</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Cutting">
+<h3>Instance: baroqueart:Cutting</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cutting">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cutting</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Draw">
+<h3>Instance: baroqueart:Draw</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Draw">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Draw</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Earthenware">
+<h3>Instance: baroqueart:Earthenware</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Earthenware">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Earthenware</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Embossed">
+<h3>Instance: baroqueart:Embossed</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Embossed">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Embossed</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Embroidery">
+<h3>Instance: baroqueart:Embroidery</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Embroidery">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Embroidery</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Enamel">
+<h3>Instance: baroqueart:Enamel</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Enamel">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Enamel</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Engraving">
+<h3>Instance: baroqueart:Engraving</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Engraving">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Engraving</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Etching">
+<h3>Instance: baroqueart:Etching</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Etching">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Etching</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Farmer">
+<h3>Instance: baroqueart:Farmer</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Farmer">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Farmer</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Occupation" style="font-family: monospace;">baroqueart:Occupation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Feather">
+<h3>Instance: baroqueart:Feather</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Feather">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Feather</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Fiber">
+<h3>Instance: baroqueart:Fiber</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiber">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiber</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Fiberboard">
+<h3>Instance: baroqueart:Fiberboard</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiberboard">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiberboard</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Fiction">
+<h3>Instance: baroqueart:Fiction</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiction">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiction</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Foot">
+<h3>Instance: baroqueart:Foot</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Foot">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Foot</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_BodyPart" style="font-family: monospace;">baroqueart:BodyPart</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Fresco">
+<h3>Instance: baroqueart:Fresco</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fresco">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fresco</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_GenderIndeterminate">
+<h3>Instance: baroqueart:GenderIndeterminate</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GenderIndeterminate">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GenderIndeterminate</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Gender" style="font-family: monospace;">baroqueart:Gender</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_GenderNotRevealed">
+<h3>Instance: baroqueart:GenderNotRevealed</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GenderNotRevealed">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GenderNotRevealed</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Gender" style="font-family: monospace;">baroqueart:Gender</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_GenderUnknown">
+<h3>Instance: baroqueart:GenderUnknown</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GenderUnknown">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GenderUnknown</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Gender" style="font-family: monospace;">baroqueart:Gender</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Gipsy">
+<h3>Instance: baroqueart:Gipsy</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gipsy">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gipsy</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Ethnic" style="font-family: monospace;">baroqueart:Ethnic</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Glass">
+<h3>Instance: baroqueart:Glass</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Glass">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Glass</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Glaze">
+<h3>Instance: baroqueart:Glaze</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Glaze">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Glaze</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Glued">
+<h3>Instance: baroqueart:Glued</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Glued">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Glued</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Gold">
+<h3>Instance: baroqueart:Gold</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gold">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gold</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_GoldColored">
+<h3>Instance: baroqueart:GoldColored</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GoldColored">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GoldColored</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Gouache">
+<h3>Instance: baroqueart:Gouache</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gouache">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gouache</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Gouge">
+<h3>Instance: baroqueart:Gouge</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gouge">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gouge</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Tool" style="font-family: monospace;">baroqueart:Tool</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Graver">
+<h3>Instance: baroqueart:Graver</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Graver">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Graver</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Tool" style="font-family: monospace;">baroqueart:Tool</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Grisalle">
+<h3>Instance: baroqueart:Grisalle</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Grisalle">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Grisalle</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Gum">
+<h3>Instance: baroqueart:Gum</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gum">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gum</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Hammer">
+<h3>Instance: baroqueart:Hammer</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hammer">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hammer</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Tool" style="font-family: monospace;">baroqueart:Tool</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Hand">
+<h3>Instance: baroqueart:Hand</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hand">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hand</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_BodyPart" style="font-family: monospace;">baroqueart:BodyPart</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Head">
+<h3>Instance: baroqueart:Head</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Head">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Head</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_BodyPart" style="font-family: monospace;">baroqueart:BodyPart</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Heart">
+<h3>Instance: baroqueart:Heart</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Heart">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Heart</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_BodyPart" style="font-family: monospace;">baroqueart:BodyPart</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Hemp">
+<h3>Instance: baroqueart:Hemp</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hemp">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hemp</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Historical">
+<h3>Instance: baroqueart:Historical</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Historical">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Historical</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Illuminate">
+<h3>Instance: baroqueart:Illuminate</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Illuminate">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Illuminate</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Indigenous">
+<h3>Instance: baroqueart:Indigenous</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Indigenous">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Indigenous</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Ethnic" style="font-family: monospace;">baroqueart:Ethnic</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Ink">
+<h3>Instance: baroqueart:Ink</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ink">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ink</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Inlaid">
+<h3>Instance: baroqueart:Inlaid</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Inlaid">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Inlaid</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Ivory">
+<h3>Instance: baroqueart:Ivory</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ivory">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ivory</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Jester">
+<h3>Instance: baroqueart:Jester</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Jester">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Jester</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Occupation" style="font-family: monospace;">baroqueart:Occupation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Landscape">
+<h3>Instance: baroqueart:Landscape</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Landscape">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Landscape</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Leather">
+<h3>Instance: baroqueart:Leather</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Leather">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Leather</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Limbs">
+<h3>Instance: baroqueart:Limbs</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Limbs">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Limbs</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_BodyPart" style="font-family: monospace;">baroqueart:BodyPart</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Linen">
+<h3>Instance: baroqueart:Linen</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Linen">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Linen</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Maguey">
+<h3>Instance: baroqueart:Maguey</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Maguey">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Maguey</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Maize">
+<h3>Instance: baroqueart:Maize</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Maize">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Maize</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Map">
+<h3>Instance: baroqueart:Map</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Map">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Map</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Marble">
+<h3>Instance: baroqueart:Marble</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Marble">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Marble</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Mestizo">
+<h3>Instance: baroqueart:Mestizo</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mestizo">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mestizo</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Ethnic" style="font-family: monospace;">baroqueart:Ethnic</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Metal">
+<h3>Instance: baroqueart:Metal</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Metal">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Metal</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Military">
+<h3>Instance: baroqueart:Military</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Military">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Military</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Occupation" style="font-family: monospace;">baroqueart:Occupation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Molding">
+<h3>Instance: baroqueart:Molding</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Molding">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Molding</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Molten">
+<h3>Instance: baroqueart:Molten</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Molten">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Molten</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Monarch">
+<h3>Instance: baroqueart:Monarch</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Monarch">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Monarch</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Occupation" style="font-family: monospace;">baroqueart:Occupation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_MotherOfPearl">
+<h3>Instance: baroqueart:MotherOfPearl</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#MotherOfPearl">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#MotherOfPearl</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Mould">
+<h3>Instance: baroqueart:Mould</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mould">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mould</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Mulatto">
+<h3>Instance: baroqueart:Mulatto</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mulatto">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mulatto</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Ethnic" style="font-family: monospace;">baroqueart:Ethnic</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Mural">
+<h3>Instance: baroqueart:Mural</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mural">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mural</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Mythological">
+<h3>Instance: baroqueart:Mythological</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mythological">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mythological</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Nacre">
+<h3>Instance: baroqueart:Nacre</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nacre">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nacre</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Nature">
+<h3>Instance: baroqueart:Nature</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nature">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nature</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Nobel">
+<h3>Instance: baroqueart:Nobel</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nobel">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nobel</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Occupation" style="font-family: monospace;">baroqueart:Occupation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Notch">
+<h3>Instance: baroqueart:Notch</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Notch">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Notch</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_NotReligious">
+<h3>Instance: baroqueart:NotReligious</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#NotReligious">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#NotReligious</a></p>
+<p><em>Creencia no religiosa</em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Belief" style="font-family: monospace;">baroqueart:Belief</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Nude">
+<h3>Instance: baroqueart:Nude</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nude">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nude</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Officer">
+<h3>Instance: baroqueart:Officer</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Officer">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Officer</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Occupation" style="font-family: monospace;">baroqueart:Occupation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Paintbrush">
+<h3>Instance: baroqueart:Paintbrush</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Paintbrush">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Paintbrush</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Tool" style="font-family: monospace;">baroqueart:Tool</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Papel">
+<h3>Instance: baroqueart:Papel</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Papel">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Papel</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Paper">
+<h3>Instance: baroqueart:Paper</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Paper">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Paper</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Parchment">
+<h3>Instance: baroqueart:Parchment</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Parchment">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Parchment</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Pencil">
+<h3>Instance: baroqueart:Pencil</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Pencil">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Pencil</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Plan">
+<h3>Instance: baroqueart:Plan</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plan">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plan</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Plank">
+<h3>Instance: baroqueart:Plank</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plank">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plank</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Plaster">
+<h3>Instance: baroqueart:Plaster</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plaster">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plaster</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Polychrome">
+<h3>Instance: baroqueart:Polychrome</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Polychrome">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Polychrome</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Porphyry">
+<h3>Instance: baroqueart:Porphyry</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Porphyry">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Porphyry</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Portrait">
+<h3>Instance: baroqueart:Portrait</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Portrait">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Portrait</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Pottery">
+<h3>Instance: baroqueart:Pottery</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Pottery">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Pottery</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Printed">
+<h3>Instance: baroqueart:Printed</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Printed">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Printed</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Quilt">
+<h3>Instance: baroqueart:Quilt</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Quilt">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Quilt</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Reed">
+<h3>Instance: baroqueart:Reed</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Reed">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Reed</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Relief">
+<h3>Instance: baroqueart:Relief</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Relief">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Relief</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Religion">
+<h3>Instance: baroqueart:Religion</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Religion">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Religion</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Religious">
+<h3>Instance: baroqueart:Religious</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Religious">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Religious</a></p>
+<p><em>Creencia religiosa</em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Belief" style="font-family: monospace;">baroqueart:Belief</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_RitualGenre">
+<h3>Instance: baroqueart:RitualGenre</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#RitualGenre">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#RitualGenre</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Saints">
+<h3>Instance: baroqueart:Saints</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Saints">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Saints</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Sanguine">
+<h3>Instance: baroqueart:Sanguine</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sanguine">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sanguine</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Satin">
+<h3>Instance: baroqueart:Satin</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Satin">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Satin</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Sculpture">
+<h3>Instance: baroqueart:Sculpture</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sculpture">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sculpture</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Shell">
+<h3>Instance: baroqueart:Shell</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Shell">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Shell</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Shepherd">
+<h3>Instance: baroqueart:Shepherd</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Shepherd">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Shepherd</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Occupation" style="font-family: monospace;">baroqueart:Occupation</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Silk">
+<h3>Instance: baroqueart:Silk</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Silk">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Silk</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Silver">
+<h3>Instance: baroqueart:Silver</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Silver">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Silver</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Skin">
+<h3>Instance: baroqueart:Skin</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Skin">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Skin</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Sponge">
+<h3>Instance: baroqueart:Sponge</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sponge">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sponge</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Tool" style="font-family: monospace;">baroqueart:Tool</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_SpongeCake">
+<h3>Instance: baroqueart:SpongeCake</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#SpongeCake">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#SpongeCake</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Steel">
+<h3>Instance: baroqueart:Steel</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Steel">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Steel</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_StillLife">
+<h3>Instance: baroqueart:StillLife</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#StillLife">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#StillLife</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Stone">
+<h3>Instance: baroqueart:Stone</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Stone">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Stone</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Tempera">
+<h3>Instance: baroqueart:Tempera</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tempera">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tempera</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Tinplate">
+<h3>Instance: baroqueart:Tinplate</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tinplate">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tinplate</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Tooled">
+<h3>Instance: baroqueart:Tooled</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tooled">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tooled</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Torso">
+<h3>Instance: baroqueart:Torso</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Torso">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Torso</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_BodyPart" style="font-family: monospace;">baroqueart:BodyPart</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Tortoiseshell">
+<h3>Instance: baroqueart:Tortoiseshell</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tortoiseshell">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tortoiseshell</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Trinity">
+<h3>Instance: baroqueart:Trinity</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Trinity">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Trinity</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Vanitas">
+<h3>Instance: baroqueart:Vanitas</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Vanitas">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Vanitas</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Genre" style="font-family: monospace;">baroqueart:Genre</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Vellum">
+<h3>Instance: baroqueart:Vellum</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Vellum">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Vellum</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Watercolor">
+<h3>Instance: baroqueart:Watercolor</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Watercolor">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Watercolor</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_WateredDown">
+<h3>Instance: baroqueart:WateredDown</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WateredDown">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WateredDown</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_White">
+<h3>Instance: baroqueart:White</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#White">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#White</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Ethnic" style="font-family: monospace;">baroqueart:Ethnic</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_WhiteLead">
+<h3>Instance: baroqueart:WhiteLead</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WhiteLead">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WhiteLead</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_WhiteWateredDown">
+<h3>Instance: baroqueart:WhiteWateredDown</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WhiteWateredDown">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WhiteWateredDown</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Technique" style="font-family: monospace;">baroqueart:Technique</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Wineskin">
+<h3>Instance: baroqueart:Wineskin</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Wineskin">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Wineskin</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Wood">
+<h3>Instance: baroqueart:Wood</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Wood">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Wood</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<div class="specterm" id="term_Zinc">
+<h3>Instance: baroqueart:Zinc</h3>
+<p style="font-family: monospace;">URI: <a
+ href="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Zinc">http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Zinc</a></p>
+<p><em></em> - </p>
+<dl>
+  <dt>RDF Type:</dt>
+  <dd><a href="http://www.w3.org/2002/07/owl#NamedIndividual"
+ style="font-family: monospace;">owl:NamedIndividual</a></dd>
+  <dd><a href="#term_Material" style="font-family: monospace;">baroqueart:Material</a></dd>
+</dl>
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back
+to top</a>]</p>
+</div>
+<!-- End of the terms list -->
+</div>
+<div class="back">
+<div class="div1">
+<h2 id="furtherwork">4 Further work<br>
+</h2>
+<h2 id="references">A References</h2>
+<dl>
+  <dt class="label" id="ref-dublin-core">Dublin Core<br>
+  </dt>
+  <dd> <em><a href="http://dublincore.org/documents/dces/">Dublin Core
+Metadata Initiaive Element Set</a></em>. The Dublin Core Metadata
+Initiative, October 2010.<br>
+  </dd>
+  <dt class="label" id="ref-rfc2119">IETF RFC 2119</dt>
+  <dd> <em><a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119: Key
+words for use in RFCs to Indicate Requirement Levels</a></em>. Internet
+Engineering Task Force, 1997 (see http://www.ietf.org/rfc/rfc2119.txt).
+  </dd>
+</dl>
+</div>
+</div>
+<div class="div1">
+<h2 id="changes">B Changes in this version (Non-Normative)</h2>
+<ul>
+  <li>
+    <p>25 February 2011. First public version of the specification.<br>
+    </p>
+  </li>
+</ul>
+</div>
+<div class="div1">
+<h2>C Acknowledgements (Non-Normative)</h2>
+<p> This document was produced with the participation of the several <a
+ href="http://www.cultureplex.ca/">CulturePlex</a> members (by
+alphabetic order):<br>
+</p>
+<ul>
+  <li>Urani Montiel &lt;<a href="mailto:cmontiel@uwo.ca">cmontiel@uwo.ca</a>&gt;
+(CulturePlex)<br>
+  </li>
+  <li>Miriam Peña &lt;<a href="mailto:mpenapie@uwo.ca">mpenapie@uwo.ca</a>&gt;
+(CulturePlex)<br>
+  </li>
+</ul>
+<p> </p>
+</div>
+</div>
+<div id="footer"> <a href="http://www.sshrc-crsh.gc.ca/"> <img
+ src="http://www.cultureplex.ca/images/banners/fip_sshrc_e.gif"
+ alt="Social Sciences and Humanities Research Council of Canada"
+ id="sshrc"> </a> <a href="http://www.cultureplex.ca/">CulturePlex</a>
+is being partially funded by <a href="http://www.uwo.ca">The
+Univsersity of Western Ontario</a>, <a href="http://www.innovation.ca/">Canada
+Foundation
+for
+Innovation</a> and <a href="http://www.sshrc-crsh.gc.ca/">Social
+Sciences and Humanities
+Research Council of Canada</a>.
+</div>
+<!-- specification regenerated by SpecGen5 at 14:52:27 02/23/11 EST -->
+</body>
+</html>

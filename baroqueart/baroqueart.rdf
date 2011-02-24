@@ -1,0 +1,2518 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY baroqueart "http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#" >
+    <!ENTITY EugênioD "http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#EugênioD&#39;" >
+    <!ENTITY EugenioD "http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#EugenioD&#39;" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:EugênioD="&baroqueart;EugênioD&#39;"
+     xmlns:baroqueart="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:EugenioD="&baroqueart;EugenioD&#39;">
+    <Ontology rdf:about="http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf">
+        <dc:publisher rdf:datatype="&rdfs;Literal">CulturePlex Lab</dc:publisher>
+        <dc:creator rdf:datatype="&rdfs;Literal">Javier de la Rosa</dc:creator>
+        <dc:description rdf:datatype="&rdfs;Literal">Ontology to describe artworks in the Hispanic Baroque.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Ontología para la descripción del arte en el Barroco Hispánico.</dc:description>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <AnnotationProperty rdf:about="&dc;creator"/>
+    <AnnotationProperty rdf:about="&dc;publisher"/>
+    <AnnotationProperty rdf:about="&dc;type"/>
+    <AnnotationProperty rdf:about="&rdfs;label"/>
+    <AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#belongsToEthnic -->
+
+    <ObjectProperty rdf:about="&baroqueart;belongsToEthnic"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#consistsOf -->
+
+    <ObjectProperty rdf:about="&baroqueart;consistsOf"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#fromBody -->
+
+    <ObjectProperty rdf:about="&baroqueart;fromBody"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasBelief -->
+
+    <ObjectProperty rdf:about="&baroqueart;hasBelief"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasFold -->
+
+    <ObjectProperty rdf:about="&baroqueart;hasFold"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasMonad -->
+
+    <ObjectProperty rdf:about="&baroqueart;hasMonad"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasOccupation -->
+
+    <ObjectProperty rdf:about="&baroqueart;hasOccupation"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#hasTheory -->
+
+    <ObjectProperty rdf:about="&baroqueart;hasTheory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isClassifiedUnder -->
+
+    <ObjectProperty rdf:about="&baroqueart;isClassifiedUnder"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isExpressed -->
+
+    <ObjectProperty rdf:about="&baroqueart;isExpressed"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isGender -->
+
+    <ObjectProperty rdf:about="&baroqueart;isGender"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isMeasurable -->
+
+    <ObjectProperty rdf:about="&baroqueart;isMeasurable"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isNotMeasurable -->
+
+    <ObjectProperty rdf:about="&baroqueart;isNotMeasurable"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#isOld -->
+
+    <ObjectProperty rdf:about="&baroqueart;isOld"/>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#usesTechnique -->
+
+    <ObjectProperty rdf:about="&baroqueart;usesTechnique">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#usesTool -->
+
+    <ObjectProperty rdf:about="&baroqueart;usesTool"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#AbstractEntity -->
+
+    <Class rdf:about="&baroqueart;AbstractEntity">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Abstract entity</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Entidad abstracta</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <complementOf rdf:resource="&baroqueart;ConcreteEntity"/>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Description"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;isClassifiedUnder"/>
+                <onClass rdf:resource="&baroqueart;Genre"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Activity -->
+
+    <Class rdf:about="&baroqueart;Activity">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Actividad</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;HumanIntentionalState"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;usesTool"/>
+                <onClass rdf:resource="&baroqueart;Tool"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;usesTechnique"/>
+                <onClass rdf:resource="&baroqueart;Technique"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="&rdfs;Literal">Actividad mediante la cual se expresa el estado intencional humano</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Activity through which the human intentional state is expressed</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Age -->
+
+    <Class rdf:about="&baroqueart;Age">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Age</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Edad</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;HumanBeing"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Altarpiece -->
+
+    <Class rdf:about="&baroqueart;Altarpiece">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Animal -->
+
+    <Class rdf:about="&baroqueart;Animal">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Aniamal</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Animal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Animal no humano</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Not human animal</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Arch -->
+
+    <Class rdf:about="&baroqueart;Arch">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Architecture -->
+
+    <Class rdf:about="&baroqueart;Architecture">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Attentionality -->
+
+    <Class rdf:about="&baroqueart;Attentionality">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Atencionalidad</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Attentionality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;HumanIntentionalState"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Tomasello (202): &quot;Esta adaptación consiste en la capacidad y la tendencia de los individuos a identificarse con sus congéneres de manera que les permita comprenderlos como agentes intencionales como el yo, que posee sus propias intenciones y atención, y, finalmente, para entender como mental agentes como el yo, que poseen sus propios deseos y creencias &quot;.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Tomasello (202): “This adaptation consists in the ability and tendency of individuals to identify with conspecifics in ways that enable them to understand those conspecifics as intentional agents like the self, possessing their own intentions and attention, and eventually to understand them as mental agents like the self, possessing their own desires and beliefs”.  </dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Belief -->
+
+    <Class rdf:about="&baroqueart;Belief">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Belief</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Conjunto de creencias sobre los que se fundamenta una interpretación y/o un teoría.</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Creencia</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Set of beliefs that an interpretation and/or a theory are based on.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;InterpretableThing"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BenedetoCroce -->
+
+    <Class rdf:about="&baroqueart;BenedetoCroce">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Benoist -->
+
+    <Class rdf:about="&baroqueart;Benoist">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Biptych -->
+
+    <Class rdf:about="&baroqueart;Biptych">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BodyPart -->
+
+    <Class rdf:about="&baroqueart;BodyPart">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Body part</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Parte del cuerpo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;fromBody"/>
+                <someValuesFrom rdf:resource="&baroqueart;HumanBeing"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Burckhardt -->
+
+    <Class rdf:about="&baroqueart;Burckhardt">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Canvas -->
+
+    <Class rdf:about="&baroqueart;Canvas">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Canvas</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Lienzo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Monad"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Celebration -->
+
+    <Class rdf:about="&baroqueart;Celebration">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Celebración</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Celebration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;WithHumanParticipation"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#ChristineBuci-Glucksmann -->
+
+    <Class rdf:about="&baroqueart;ChristineBuci-Glucksmann">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#ConcreteEntity -->
+
+    <Class rdf:about="&baroqueart;ConcreteEntity">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Concrete entity</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Entidad concreta</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <complementOf rdf:resource="&baroqueart;AbstractEntity"/>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Description"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Confineable -->
+
+    <Class rdf:about="&baroqueart;Confineable">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Confineable thing</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Cosa confinable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Virtuality"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crucifix -->
+
+    <Class rdf:about="&baroqueart;Crucifix">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Deity -->
+
+    <Class rdf:about="&baroqueart;Deity">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Deidad</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Deity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Deleuze -->
+
+    <Class rdf:about="&baroqueart;Deleuze">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Description -->
+
+    <Class rdf:about="&baroqueart;Description">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Descripción</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Representation"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;consistsOf"/>
+                <onClass rdf:resource="&baroqueart;ConcreteEntity"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;consistsOf"/>
+                <onClass rdf:resource="&baroqueart;AbstractEntity"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="&rdfs;Literal">Descripción de la realidad, ficticia y posible, a través de los componentes figurativos de la obra en base a las entidades concretas y abstractas que contiene.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Description of reality, fiction and possible, through the figurative component of the work based on concrete and abstract entities it contains.</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Diptych -->
+
+    <Class rdf:about="&baroqueart;Diptych">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Drawing -->
+
+    <Class rdf:about="&baroqueart;Drawing">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Dvorak -->
+
+    <Class rdf:about="&baroqueart;Dvorak">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#EngravingFold -->
+
+    <Class rdf:about="&baroqueart;EngravingFold">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ethnic -->
+
+    <Class rdf:about="&baroqueart;Ethnic">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Ethnic</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Étnia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;HumanBeing"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#EugenioD&#39;Ors -->
+
+    <Class rdf:about="&baroqueart;EugenioD&#39;Ors">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiesta -->
+
+    <Class rdf:about="&baroqueart;Fiesta">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Fiesta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;WithHumanParticipation"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Figurative -->
+
+    <Class rdf:about="&baroqueart;Figurative">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Figurative</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Figurativo</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <complementOf rdf:resource="&baroqueart;NotFigurative"/>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Meaning"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Flag -->
+
+    <Class rdf:about="&baroqueart;Flag">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Focillon -->
+
+    <Class rdf:about="&baroqueart;Focillon">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Focus -->
+
+    <Class rdf:about="&baroqueart;Focus">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Foco</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Focus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;AbstractEntity"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Foco de importancia</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Focus of importance</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fold -->
+
+    <Class rdf:about="&baroqueart;Fold">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Fold</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Pliegue de mónadas con nombre propio e indistinguibles de las demás</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;WithoutHumanParticipation"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;hasMonad"/>
+                <onClass rdf:resource="&baroqueart;Monad"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;hasFold"/>
+                <onClass rdf:resource="&baroqueart;Fold"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</minQualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="&rdfs;Literal">Monad fold with its own name and indistinguishable from the rest of them</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Pliegue</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#FoldingScreen -->
+
+    <Class rdf:about="&baroqueart;FoldingScreen">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Frame -->
+
+    <Class rdf:about="&baroqueart;Frame">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Frame</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Marco</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Monad"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#FrescoFold -->
+
+    <Class rdf:about="&baroqueart;FrescoFold">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Furniture -->
+
+    <Class rdf:about="&baroqueart;Furniture">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gender -->
+
+    <Class rdf:about="&baroqueart;Gender">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Gender</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Género</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;HumanBeing"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Genre -->
+
+    <Class rdf:about="&baroqueart;Genre">
+        <rdfs:subClassOf rdf:resource="&baroqueart;AbstractEntity"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Genre</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Género</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Goldsmithing -->
+
+    <Class rdf:about="&baroqueart;Goldsmithing">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Guattari -->
+
+    <Class rdf:about="&baroqueart;Guattari">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HeavenlyBody -->
+
+    <Class rdf:about="&baroqueart;HeavenlyBody">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Cuerpo celeste</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Heavenly body</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HeinrichWolfflin -->
+
+    <Class rdf:about="&baroqueart;HeinrichWolfflin">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HelmutHatzfeld -->
+
+    <Class rdf:about="&baroqueart;HelmutHatzfeld">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hero -->
+
+    <Class rdf:about="&baroqueart;Hero">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Hero</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Héroe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Héroe mitológico</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Mythological hero</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HumanBeing -->
+
+    <Class rdf:about="&baroqueart;HumanBeing">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Human being</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Ser humano</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;isGender"/>
+                <someValuesFrom rdf:resource="&baroqueart;Gender"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;belongsToEthnic"/>
+                <someValuesFrom rdf:resource="&baroqueart;Ethnic"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;isOld"/>
+                <someValuesFrom rdf:resource="&baroqueart;Age"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;hasOccupation"/>
+                <someValuesFrom rdf:resource="&baroqueart;Occupation"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#HumanIntentionalState -->
+
+    <Class rdf:about="&baroqueart;HumanIntentionalState">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Estado intencional humano</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Human intentional state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Ideality"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;isExpressed"/>
+                <someValuesFrom rdf:resource="&baroqueart;Activity"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="&rdfs;Literal">Abstract artifacts that exist only in the mind, which are internal or are subject to it in its existence. They have no restraint.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Artefactos abstractos que sólo existen en la mente, que son internos o están supeditados a ella en su existencia. Que no tienen mesura.</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ideality -->
+
+    <Class rdf:about="&baroqueart;Ideality">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Idealidad</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Ideality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Virtuality"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Abstract artifact that exist only mind internally</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Artefactos abstractos que sólo existen en la mente</dc:description>
+        <dc:type rdf:resource="&baroqueart;isNotMeasurable"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#InitialConnection -->
+
+    <Class rdf:about="&baroqueart;InitialConnection">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Conexión inicial</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Initial connection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Attentionality"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#InterpretableThing -->
+
+    <Class rdf:about="&baroqueart;InterpretableThing">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Ideality"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;hasTheory"/>
+                <onClass rdf:resource="&baroqueart;Theory"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&baroqueart;hasBelief"/>
+                <onClass rdf:resource="&baroqueart;Belief"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</minQualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="&rdfs;Literal">Cosas sujetas a la interpretación humana.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Interpretable thing</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Thing subject to human interpretation</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Things subject to human interpretation.</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Jewelry -->
+
+    <Class rdf:about="&baroqueart;Jewelry">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Lacan -->
+
+    <Class rdf:about="&baroqueart;Lacan">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Maravall -->
+
+    <Class rdf:about="&baroqueart;Maravall">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Material -->
+
+    <Class rdf:about="&baroqueart;Material">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;WithoutHumanParticipation"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Meaning -->
+
+    <Class rdf:about="&baroqueart;Meaning">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Meaning</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Significado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;InterpretableThing"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Medal -->
+
+    <Class rdf:about="&baroqueart;Medal">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Medallion -->
+
+    <Class rdf:about="&baroqueart;Medallion">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Merleau-Ponty -->
+
+    <Class rdf:about="&baroqueart;Merleau-Ponty">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Metaphor -->
+
+    <Class rdf:about="&baroqueart;Metaphor">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Metaphor</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Metáfora</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Representation"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Relación existente entre el significado de un objeto distinguible del resto en la obra con otra entidad, idea, concepto, persona o lugar.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Relationship between the meaning of an object indistinguishable from the rest in the work with another entity, idea, concept, person or place.</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Monad -->
+
+    <Class rdf:about="&baroqueart;Monad">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Monad</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Mónada</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;WithoutHumanParticipation"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Monad of Leibniz</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Mónada de Leibniz</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Moret -->
+
+    <Class rdf:about="&baroqueart;Moret">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#MythologicalBeing -->
+
+    <Class rdf:about="&baroqueart;MythologicalBeing">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Mythological being</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Ser mitológico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nail -->
+
+    <Class rdf:about="&baroqueart;Nail">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#NotFigurative -->
+
+    <Class rdf:about="&baroqueart;NotFigurative">
+        <rdfs:label rdf:datatype="&rdfs;Literal">No figurativo</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Not figurative</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <complementOf rdf:resource="&baroqueart;Figurative"/>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Meaning"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Object -->
+
+    <Class rdf:about="&baroqueart;Object">
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Occupation -->
+
+    <Class rdf:about="&baroqueart;Occupation">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Occupation</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Ocupación</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;HumanBeing"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#OmarCalabrese -->
+
+    <Class rdf:about="&baroqueart;OmarCalabrese">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Painting -->
+
+    <Class rdf:about="&baroqueart;Painting">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#PerceptibleThing -->
+
+    <Class rdf:about="&baroqueart;PerceptibleThing">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Cosa perceptible</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Perceptible thing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Physicality"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Perceptible a través de los sentidos humanos.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Perceptible through the human senses</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Photography -->
+
+    <Class rdf:about="&baroqueart;Photography">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Physicality -->
+
+    <Class rdf:about="&baroqueart;Physicality">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Fisicalidad</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Physicality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Virtuality"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Existence mind-independent.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Existencia independiente de la mente.</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#PictureCard -->
+
+    <Class rdf:about="&baroqueart;PictureCard">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#PierreCharpentrat -->
+
+    <Class rdf:about="&baroqueart;PierreCharpentrat">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Pigment -->
+
+    <Class rdf:about="&baroqueart;Pigment">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Pigment</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Pigmento</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Monad"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plant -->
+
+    <Class rdf:about="&baroqueart;Plant">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Plant</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Planta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plate -->
+
+    <Class rdf:about="&baroqueart;Plate">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Preclin -->
+
+    <Class rdf:about="&baroqueart;Preclin">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#ReliefFold -->
+
+    <Class rdf:about="&baroqueart;ReliefFold">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Renderizable -->
+
+    <Class rdf:about="&baroqueart;Renderizable">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Renderizable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Virtuality"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Que tiene una manera de ser renderizado, representado, manifestado o simulado.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Thing that has a way to render, represent, express or simulate itself.</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Representation -->
+
+    <Class rdf:about="&baroqueart;Representation">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Representación</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Representation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;InterpretableThing"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Entidad en que se hace presente a la conciencia la idealidad.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Entity that is present to consciousness the ideal.</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Resonance -->
+
+    <Class rdf:about="&baroqueart;Resonance">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Resonance</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Resonancia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Attentionality"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ritual -->
+
+    <Class rdf:about="&baroqueart;Ritual">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Ritual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;WithHumanParticipation"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Rousset -->
+
+    <Class rdf:about="&baroqueart;Rousset">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Screen -->
+
+    <Class rdf:about="&baroqueart;Screen">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#SculptureMonad -->
+
+    <Class rdf:about="&baroqueart;SculptureMonad">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Escultura</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Sculpture</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Monad"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#SeveroSarduy -->
+
+    <Class rdf:about="&baroqueart;SeveroSarduy">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sheet -->
+
+    <Class rdf:about="&baroqueart;Sheet">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Silversmithing -->
+
+    <Class rdf:about="&baroqueart;Silversmithing">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sketch -->
+
+    <Class rdf:about="&baroqueart;Sketch">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Statue -->
+
+    <Class rdf:about="&baroqueart;Statue">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Symbology -->
+
+    <Class rdf:about="&baroqueart;Symbology">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Simbología</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Symbology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Representation"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Analogies for the description referring to other aspects of reality and fiction that are used regularly, metaphorically or not.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Analogías por alusión de la descripción con otros aspectos de la realidad o la ficción que se usan de manera regular, metafóricamente o no.</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tapie -->
+
+    <Class rdf:about="&baroqueart;Tapie">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Technique -->
+
+    <Class rdf:about="&baroqueart;Technique">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Technique</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Técnica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;Activity"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Text -->
+
+    <Class rdf:about="&baroqueart;Text">
+        <rdfs:subClassOf rdf:resource="&baroqueart;ConcreteEntity"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Theory -->
+
+    <Class rdf:about="&baroqueart;Theory">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Teoría</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Theory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;InterpretableThing"/>
+        <dc:description rdf:datatype="&rdfs;Literal">Conocimiento especulativo considerado en base a los criterios de los «expertos»</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Considered speculative knowlegde based on the criterias of the &quot;experts&quot;</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tool -->
+
+    <Class rdf:about="&baroqueart;Tool">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Activity"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Triptych -->
+
+    <Class rdf:about="&baroqueart;Triptych">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Fold"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Virtuality -->
+
+    <Class rdf:about="&baroqueart;Virtuality">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Virtualidad</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Virtuality</rdfs:label>
+        <dc:description rdf:datatype="&rdfs;Literal">Entidad que engloba tanto la concepción de la obra en su matiz de idealidad como la componente física de la misma.</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Entity that includes both a conception of the work as a tinge of ideality and the physical component of it.</dc:description>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WalterBenjamin -->
+
+    <Class rdf:about="&baroqueart;WalterBenjamin">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WernerWeisbach -->
+
+    <Class rdf:about="&baroqueart;WernerWeisbach">
+        <rdfs:subClassOf rdf:resource="&baroqueart;Theory"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WithHumanParticipation -->
+
+    <Class rdf:about="&baroqueart;WithHumanParticipation">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Con participación humana</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">With human participation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;PerceptibleThing"/>
+    </Class>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WithoutHumanParticipation -->
+
+    <Class rdf:about="&baroqueart;WithoutHumanParticipation">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Sin participación humana</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Without human participation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&baroqueart;PerceptibleThing"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Afro -->
+
+    <NamedIndividual rdf:about="&baroqueart;Afro">
+        <rdf:type rdf:resource="&baroqueart;Ethnic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#AgglomerateBoard -->
+
+    <NamedIndividual rdf:about="&baroqueart;AgglomerateBoard">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Alabaster -->
+
+    <NamedIndividual rdf:about="&baroqueart;Alabaster">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Allegorical -->
+
+    <NamedIndividual rdf:about="&baroqueart;Allegorical">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Aluminium -->
+
+    <NamedIndividual rdf:about="&baroqueart;Aluminium">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Angelic -->
+
+    <NamedIndividual rdf:about="&baroqueart;Angelic">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Architectural -->
+
+    <NamedIndividual rdf:about="&baroqueart;Architectural">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Artist -->
+
+    <NamedIndividual rdf:about="&baroqueart;Artist">
+        <rdf:type rdf:resource="&baroqueart;Occupation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Baked -->
+
+    <NamedIndividual rdf:about="&baroqueart;Baked">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BasRelief -->
+
+    <NamedIndividual rdf:about="&baroqueart;BasRelief">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Black -->
+
+    <NamedIndividual rdf:about="&baroqueart;Black">
+        <rdf:type rdf:resource="&baroqueart;Ethnic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BornFemale -->
+
+    <NamedIndividual rdf:about="&baroqueart;BornFemale">
+        <rdf:type rdf:resource="&baroqueart;Gender"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#BornMale -->
+
+    <NamedIndividual rdf:about="&baroqueart;BornMale">
+        <rdf:type rdf:resource="&baroqueart;Gender"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Brocade -->
+
+    <NamedIndividual rdf:about="&baroqueart;Brocade">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Bronze -->
+
+    <NamedIndividual rdf:about="&baroqueart;Bronze">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Brush -->
+
+    <NamedIndividual rdf:about="&baroqueart;Brush">
+        <rdf:type rdf:resource="&baroqueart;Tool"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cane -->
+
+    <NamedIndividual rdf:about="&baroqueart;Cane">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cardboard -->
+
+    <NamedIndividual rdf:about="&baroqueart;Cardboard">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Carved -->
+
+    <NamedIndividual rdf:about="&baroqueart;Carved">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Castes -->
+
+    <NamedIndividual rdf:about="&baroqueart;Castes">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#CastesEthnic -->
+
+    <NamedIndividual rdf:about="&baroqueart;CastesEthnic">
+        <rdf:type rdf:resource="&baroqueart;Ethnic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Casting -->
+
+    <NamedIndividual rdf:about="&baroqueart;Casting">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ceramics -->
+
+    <NamedIndividual rdf:about="&baroqueart;Ceramics">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Charcoal -->
+
+    <NamedIndividual rdf:about="&baroqueart;Charcoal">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#China -->
+
+    <NamedIndividual rdf:about="&baroqueart;China">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Chipboard -->
+
+    <NamedIndividual rdf:about="&baroqueart;Chipboard">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Chisel -->
+
+    <NamedIndividual rdf:about="&baroqueart;Chisel">
+        <rdf:type rdf:resource="&baroqueart;Tool"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Chiseling -->
+
+    <NamedIndividual rdf:about="&baroqueart;Chiseling">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#CityLife -->
+
+    <NamedIndividual rdf:about="&baroqueart;CityLife">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Civil -->
+
+    <NamedIndividual rdf:about="&baroqueart;Civil">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cleric -->
+
+    <NamedIndividual rdf:about="&baroqueart;Cleric">
+        <rdf:type rdf:resource="&baroqueart;Occupation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Copper -->
+
+    <NamedIndividual rdf:about="&baroqueart;Copper">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Corn -->
+
+    <NamedIndividual rdf:about="&baroqueart;Corn">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cotton -->
+
+    <NamedIndividual rdf:about="&baroqueart;Cotton">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crayon -->
+
+    <NamedIndividual rdf:about="&baroqueart;Crayon">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crockery -->
+
+    <NamedIndividual rdf:about="&baroqueart;Crockery">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Crystal -->
+
+    <NamedIndividual rdf:about="&baroqueart;Crystal">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cut -->
+
+    <NamedIndividual rdf:about="&baroqueart;Cut">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Cutting -->
+
+    <NamedIndividual rdf:about="&baroqueart;Cutting">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Draw -->
+
+    <NamedIndividual rdf:about="&baroqueart;Draw">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Earthenware -->
+
+    <NamedIndividual rdf:about="&baroqueart;Earthenware">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Embossed -->
+
+    <NamedIndividual rdf:about="&baroqueart;Embossed">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Embroidery -->
+
+    <NamedIndividual rdf:about="&baroqueart;Embroidery">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Enamel -->
+
+    <NamedIndividual rdf:about="&baroqueart;Enamel">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Engraving -->
+
+    <NamedIndividual rdf:about="&baroqueart;Engraving">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Etching -->
+
+    <NamedIndividual rdf:about="&baroqueart;Etching">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Farmer -->
+
+    <NamedIndividual rdf:about="&baroqueart;Farmer">
+        <rdf:type rdf:resource="&baroqueart;Occupation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Feather -->
+
+    <NamedIndividual rdf:about="&baroqueart;Feather">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiber -->
+
+    <NamedIndividual rdf:about="&baroqueart;Fiber">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiberboard -->
+
+    <NamedIndividual rdf:about="&baroqueart;Fiberboard">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fiction -->
+
+    <NamedIndividual rdf:about="&baroqueart;Fiction">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Foot -->
+
+    <NamedIndividual rdf:about="&baroqueart;Foot">
+        <rdf:type rdf:resource="&baroqueart;BodyPart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Fresco -->
+
+    <NamedIndividual rdf:about="&baroqueart;Fresco">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GenderIndeterminate -->
+
+    <NamedIndividual rdf:about="&baroqueart;GenderIndeterminate">
+        <rdf:type rdf:resource="&baroqueart;Gender"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GenderNotRevealed -->
+
+    <NamedIndividual rdf:about="&baroqueart;GenderNotRevealed">
+        <rdf:type rdf:resource="&baroqueart;Gender"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GenderUnknown -->
+
+    <NamedIndividual rdf:about="&baroqueart;GenderUnknown">
+        <rdf:type rdf:resource="&baroqueart;Gender"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gipsy -->
+
+    <NamedIndividual rdf:about="&baroqueart;Gipsy">
+        <rdf:type rdf:resource="&baroqueart;Ethnic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Glass -->
+
+    <NamedIndividual rdf:about="&baroqueart;Glass">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Glaze -->
+
+    <NamedIndividual rdf:about="&baroqueart;Glaze">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Glued -->
+
+    <NamedIndividual rdf:about="&baroqueart;Glued">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gold -->
+
+    <NamedIndividual rdf:about="&baroqueart;Gold">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#GoldColored -->
+
+    <NamedIndividual rdf:about="&baroqueart;GoldColored">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gouache -->
+
+    <NamedIndividual rdf:about="&baroqueart;Gouache">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gouge -->
+
+    <NamedIndividual rdf:about="&baroqueart;Gouge">
+        <rdf:type rdf:resource="&baroqueart;Tool"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Graver -->
+
+    <NamedIndividual rdf:about="&baroqueart;Graver">
+        <rdf:type rdf:resource="&baroqueart;Tool"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Grisalle -->
+
+    <NamedIndividual rdf:about="&baroqueart;Grisalle">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Gum -->
+
+    <NamedIndividual rdf:about="&baroqueart;Gum">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hammer -->
+
+    <NamedIndividual rdf:about="&baroqueart;Hammer">
+        <rdf:type rdf:resource="&baroqueart;Tool"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hand -->
+
+    <NamedIndividual rdf:about="&baroqueart;Hand">
+        <rdf:type rdf:resource="&baroqueart;BodyPart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Head -->
+
+    <NamedIndividual rdf:about="&baroqueart;Head">
+        <rdf:type rdf:resource="&baroqueart;BodyPart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Heart -->
+
+    <NamedIndividual rdf:about="&baroqueart;Heart">
+        <rdf:type rdf:resource="&baroqueart;BodyPart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Hemp -->
+
+    <NamedIndividual rdf:about="&baroqueart;Hemp">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Historical -->
+
+    <NamedIndividual rdf:about="&baroqueart;Historical">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Illuminate -->
+
+    <NamedIndividual rdf:about="&baroqueart;Illuminate">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Indigenous -->
+
+    <NamedIndividual rdf:about="&baroqueart;Indigenous">
+        <rdf:type rdf:resource="&baroqueart;Ethnic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ink -->
+
+    <NamedIndividual rdf:about="&baroqueart;Ink">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Inlaid -->
+
+    <NamedIndividual rdf:about="&baroqueart;Inlaid">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Ivory -->
+
+    <NamedIndividual rdf:about="&baroqueart;Ivory">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Jester -->
+
+    <NamedIndividual rdf:about="&baroqueart;Jester">
+        <rdf:type rdf:resource="&baroqueart;Occupation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Landscape -->
+
+    <NamedIndividual rdf:about="&baroqueart;Landscape">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Leather -->
+
+    <NamedIndividual rdf:about="&baroqueart;Leather">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Limbs -->
+
+    <NamedIndividual rdf:about="&baroqueart;Limbs">
+        <rdf:type rdf:resource="&baroqueart;BodyPart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Linen -->
+
+    <NamedIndividual rdf:about="&baroqueart;Linen">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Maguey -->
+
+    <NamedIndividual rdf:about="&baroqueart;Maguey">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Maize -->
+
+    <NamedIndividual rdf:about="&baroqueart;Maize">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Map -->
+
+    <NamedIndividual rdf:about="&baroqueart;Map">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Marble -->
+
+    <NamedIndividual rdf:about="&baroqueart;Marble">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mestizo -->
+
+    <NamedIndividual rdf:about="&baroqueart;Mestizo">
+        <rdf:type rdf:resource="&baroqueart;Ethnic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Metal -->
+
+    <NamedIndividual rdf:about="&baroqueart;Metal">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Military -->
+
+    <NamedIndividual rdf:about="&baroqueart;Military">
+        <rdf:type rdf:resource="&baroqueart;Occupation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Molding -->
+
+    <NamedIndividual rdf:about="&baroqueart;Molding">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Molten -->
+
+    <NamedIndividual rdf:about="&baroqueart;Molten">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Monarch -->
+
+    <NamedIndividual rdf:about="&baroqueart;Monarch">
+        <rdf:type rdf:resource="&baroqueart;Occupation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#MotherOfPearl -->
+
+    <NamedIndividual rdf:about="&baroqueart;MotherOfPearl">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mould -->
+
+    <NamedIndividual rdf:about="&baroqueart;Mould">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mulatto -->
+
+    <NamedIndividual rdf:about="&baroqueart;Mulatto">
+        <rdf:type rdf:resource="&baroqueart;Ethnic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mural -->
+
+    <NamedIndividual rdf:about="&baroqueart;Mural">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Mythological -->
+
+    <NamedIndividual rdf:about="&baroqueart;Mythological">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nacre -->
+
+    <NamedIndividual rdf:about="&baroqueart;Nacre">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nature -->
+
+    <NamedIndividual rdf:about="&baroqueart;Nature">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nobel -->
+
+    <NamedIndividual rdf:about="&baroqueart;Nobel">
+        <rdf:type rdf:resource="&baroqueart;Occupation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#NotReligious -->
+
+    <NamedIndividual rdf:about="&baroqueart;NotReligious">
+        <rdf:type rdf:resource="&baroqueart;Belief"/>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Creencia no religiosa</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Not religious belief</rdfs:label>
+        <dc:description rdf:datatype="&rdfs;Literal">Creencia no religiosa</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Not religious belief</dc:description>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Notch -->
+
+    <NamedIndividual rdf:about="&baroqueart;Notch">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Nude -->
+
+    <NamedIndividual rdf:about="&baroqueart;Nude">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Officer -->
+
+    <NamedIndividual rdf:about="&baroqueart;Officer">
+        <rdf:type rdf:resource="&baroqueart;Occupation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Paintbrush -->
+
+    <NamedIndividual rdf:about="&baroqueart;Paintbrush">
+        <rdf:type rdf:resource="&baroqueart;Tool"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Papel -->
+
+    <NamedIndividual rdf:about="&baroqueart;Papel">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Paper -->
+
+    <NamedIndividual rdf:about="&baroqueart;Paper">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Parchment -->
+
+    <NamedIndividual rdf:about="&baroqueart;Parchment">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Pencil -->
+
+    <NamedIndividual rdf:about="&baroqueart;Pencil">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plan -->
+
+    <NamedIndividual rdf:about="&baroqueart;Plan">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plank -->
+
+    <NamedIndividual rdf:about="&baroqueart;Plank">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Plaster -->
+
+    <NamedIndividual rdf:about="&baroqueart;Plaster">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Polychrome -->
+
+    <NamedIndividual rdf:about="&baroqueart;Polychrome">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Porphyry -->
+
+    <NamedIndividual rdf:about="&baroqueart;Porphyry">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Portrait -->
+
+    <NamedIndividual rdf:about="&baroqueart;Portrait">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Pottery -->
+
+    <NamedIndividual rdf:about="&baroqueart;Pottery">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Printed -->
+
+    <NamedIndividual rdf:about="&baroqueart;Printed">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Quilt -->
+
+    <NamedIndividual rdf:about="&baroqueart;Quilt">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Reed -->
+
+    <NamedIndividual rdf:about="&baroqueart;Reed">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Relief -->
+
+    <NamedIndividual rdf:about="&baroqueart;Relief">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Religion -->
+
+    <NamedIndividual rdf:about="&baroqueart;Religion">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Religious -->
+
+    <NamedIndividual rdf:about="&baroqueart;Religious">
+        <rdf:type rdf:resource="&baroqueart;Belief"/>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Creencia religiosa</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">Religious belief</rdfs:label>
+        <dc:description rdf:datatype="&rdfs;Literal">Creencia religiosa</dc:description>
+        <dc:description rdf:datatype="&rdfs;Literal">Religious belief</dc:description>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#RitualGenre -->
+
+    <NamedIndividual rdf:about="&baroqueart;RitualGenre">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Saints -->
+
+    <NamedIndividual rdf:about="&baroqueart;Saints">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sanguine -->
+
+    <NamedIndividual rdf:about="&baroqueart;Sanguine">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Satin -->
+
+    <NamedIndividual rdf:about="&baroqueart;Satin">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sculpture -->
+
+    <NamedIndividual rdf:about="&baroqueart;Sculpture">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Shell -->
+
+    <NamedIndividual rdf:about="&baroqueart;Shell">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Shepherd -->
+
+    <NamedIndividual rdf:about="&baroqueart;Shepherd">
+        <rdf:type rdf:resource="&baroqueart;Occupation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Silk -->
+
+    <NamedIndividual rdf:about="&baroqueart;Silk">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Silver -->
+
+    <NamedIndividual rdf:about="&baroqueart;Silver">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Skin -->
+
+    <NamedIndividual rdf:about="&baroqueart;Skin">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Sponge -->
+
+    <NamedIndividual rdf:about="&baroqueart;Sponge">
+        <rdf:type rdf:resource="&baroqueart;Tool"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#SpongeCake -->
+
+    <NamedIndividual rdf:about="&baroqueart;SpongeCake">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Steel -->
+
+    <NamedIndividual rdf:about="&baroqueart;Steel">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#StillLife -->
+
+    <NamedIndividual rdf:about="&baroqueart;StillLife">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Stone -->
+
+    <NamedIndividual rdf:about="&baroqueart;Stone">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tempera -->
+
+    <NamedIndividual rdf:about="&baroqueart;Tempera">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tinplate -->
+
+    <NamedIndividual rdf:about="&baroqueart;Tinplate">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tooled -->
+
+    <NamedIndividual rdf:about="&baroqueart;Tooled">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Torso -->
+
+    <NamedIndividual rdf:about="&baroqueart;Torso">
+        <rdf:type rdf:resource="&baroqueart;BodyPart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Tortoiseshell -->
+
+    <NamedIndividual rdf:about="&baroqueart;Tortoiseshell">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Trinity -->
+
+    <NamedIndividual rdf:about="&baroqueart;Trinity">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Vanitas -->
+
+    <NamedIndividual rdf:about="&baroqueart;Vanitas">
+        <rdf:type rdf:resource="&baroqueart;Genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Vellum -->
+
+    <NamedIndividual rdf:about="&baroqueart;Vellum">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Watercolor -->
+
+    <NamedIndividual rdf:about="&baroqueart;Watercolor">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WateredDown -->
+
+    <NamedIndividual rdf:about="&baroqueart;WateredDown">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#White -->
+
+    <NamedIndividual rdf:about="&baroqueart;White">
+        <rdf:type rdf:resource="&baroqueart;Ethnic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WhiteLead -->
+
+    <NamedIndividual rdf:about="&baroqueart;WhiteLead">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#WhiteWateredDown -->
+
+    <NamedIndividual rdf:about="&baroqueart;WhiteWateredDown">
+        <rdf:type rdf:resource="&baroqueart;Technique"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Wineskin -->
+
+    <NamedIndividual rdf:about="&baroqueart;Wineskin">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Wood -->
+
+    <NamedIndividual rdf:about="&baroqueart;Wood">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://ontologies.cultureplex.ca/baroqueart/baroqueart.rdf#Zinc -->
+
+    <NamedIndividual rdf:about="&baroqueart;Zinc">
+        <rdf:type rdf:resource="&baroqueart;Material"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.1.0.20069) http://owlapi.sourceforge.net -->
+
